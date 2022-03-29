@@ -62,7 +62,9 @@ button { border: 0; outline: 0; cursor: pointer;font-family: 'Pretendard-Regular
 .FAB ul li { width: 33.33%; text-align: center; }
 .FAB ul li img { display: inline-block; margin-bottom: 4px; }
 
-select { border:0; outline: 0; appearance:none; text-align: right; font-weight: bold; font-family: 'Pretendard-Regular', serif; font-size: 14px; }
+select { border:0; outline: 0; appearance:n
+
+e; text-align: right; font-weight: bold; font-family: 'Pretendard-Regular', serif; font-size: 14px; }
 
 /* page */
 .cscenter { color: #888; margin-top: 32px; text-align: center; }

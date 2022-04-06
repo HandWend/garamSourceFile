@@ -1,26 +1,40 @@
-<!-- 가람관광 로그인 화면 만들어보기 -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- 뷰포트 삽입 -->
-<meta name="viewport" content="width=device-width = 1.0 ">
-<title>로그인sub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>로그인</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page01 tC">
-	<div class="mXY">
-		<img src="logo.png" alt="로고" />
+<div class="mXY">
+	<div class="">
+		<img src="img/logo.png" alt="로고"/>
+	</div>
+	<div class="a01">
+		<form method="post" action="mypage.html">
+			<div>
+				<span>ID</span>
+				<input type="text" name="" id="mid" value="" required="required" placeholder="아이디(휴대폰번호)"/>
+			</div>
+			<div>
+				<span>PW</span>
+				<input type="password" name="" id="mpw" value="" required="required" placeholder="비밀번호"/>
+			</div>
+			<div>
+				<!-- 기본값이 submit, form 태그 바깥으로 가면 작동 안함. -->
+				<button type="submit">Log in</button>
+			</div>
+			<div class="cscenter">
+				<a href="join01.html">회원가입</a>
+			</div>
+		</form>
+	</div>
+</div>
 
-		<div class="a01">
-			<div><span>ID</span><input type="text"></div>
-			<div><span>PW</span><input type="text"></div>
-			<button><a href="mypage.html">Log in</a></button>
-		</div>
+<script>
 
-		<div class="cscenter">
-			<a href="join.html">회원가입</a>
-		</div>
-		</div>
+</script>
+
 </body>
 </html>

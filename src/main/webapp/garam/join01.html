@@ -17,6 +17,11 @@
 	<!-- pd16 시작 -->
 	<div class="pd16">
 			<!-- 서비스 이용약관 동의 시작 -->
+			<div class="joinbtn w100 tC">
+				<input type="checkbox" onclick="chkAuto(this);">전체동의
+				
+			</div>
+			
 			<div class="joinbox">
 				<label for="agree1">서비스 이용약관 동의</label> <input type="checkbox"
 					id="agree1" name="" value="">
@@ -50,10 +55,12 @@
 
 <!-- javascript -->
 <script>
+
+let agree1 = document.getElementById("agree1");
+let agree2 = document.getElementById("agree2");
+let agree3 = document.getElementById("agree3");
+
 function join02() {
-	let agree1 = document.getElementById("agree1");
-	let agree2 = document.getElementById("agree2");
-	let agree3 = document.getElementById("agree3");
 	//checkbox checking
 	if (!agree1.checked) {
 		alert("서비스 이용약관 동의에 체크하세요");
@@ -72,6 +79,19 @@ function join02() {
 	}
 	location.href="join02.html";
 	//location.replace("join02.html");
+}
+
+function chkAuto(t) {
+	if (t.checked) {
+		agree1.checked = true;
+		agree2.checked = true;
+		agree3.checked = true;
+	} else {
+		agree1.checked = false;
+		agree2.checked = false;
+		agree3.checked = false;
+	}
+	console.log("전체동의를 체크하였습니다." + t.checked);
 }
 </script>
 </body>

@@ -22,17 +22,20 @@
 
 			<div>
 				<h4>이름</h4>
-				<input type="text"  name="" id="uname" value="" required="required" placeholder="성명">
+				<input type="text" name="" id="uname" value="" required="required"
+					placeholder="성명">
 			</div>
 
 			<div>
 				<h4>학교</h4>
-				<input type="text"  name="" id="school" value="" required="required" placeholder="ex) 포항장성고등학교">
+				<input type="text" name="" id="school" value="" required="required"
+					placeholder="ex) 포항장성고등학교">
 			</div>
 
 			<div>
 				<h4>학년/반</h4>
-				<input type="text"  name="" id="grade" value="" required="required" placeholder="학년-반">
+				<input type="text" name="" id="grade" value="" required="required"
+					placeholder="학년-반">
 			</div>
 
 			<div class="pnum">
@@ -41,7 +44,8 @@
 						휴대폰번호<span>(※휴대폰 번호가 ID로 설정됩니다.)</span>
 					</h4>
 				</div>
-				<input type="text"  name="" id="utel" value="" required="required" placeholder="010-xxxx-yyyy">
+				<input type="text" name="" id="utel" value="" required="required"
+					placeholder="010-xxxx-yyyy">
 			</div>
 
 			<div>
@@ -49,14 +53,18 @@
 					<h4 class="inline">비밀번호</h4>
 					<span>(※최대 12자리)</span>
 				</div>
-				<input type="password"  name="" id="pw" value="" maxlength='12' required="required"
-					onfocusout = "pwChk(this)" placeholder="문자,숫자,특수문자를 하나 이상 사용하세요.(최대 12자)">
+				<input type="password" name="" id="pw" value="" maxlength='12'
+					required="required" onfocusout="pwChk(this)" 
+					placeholder="문자,숫자,특수문자를 하나 이상 사용하세요.(최대 12자)">
 			</div>
 
 			<div>
 				<h4>비밀번호 확인</h4>
-				<input type="password"  name="" id="pw2" value="" maxlength='12' required="required"
-					placeholder="비밀번호 확인">
+				<input type="password" name="" id="pw2" value="" maxlength='12'
+					required="required" placeholder="비밀번호 확인"> 
+					<label>
+						<input type="checkbox"  onclick="pwshow(this)">비밀번호 표시
+					</label>
 			</div>
 
 			<div>
@@ -85,69 +93,80 @@
 			</div>
 
 			<div class="jw100 tC">
-				<button type="submit">가입하기</button>
+				<button type="submit" onclick="confirm()">가입하기</button>
 			</div>
 		</div>
 	</form>
-	
-	
+
+
 	<script>
-	
-	function selRoad() {
-		let place = document.getElementById("place");
-		place.options[0].selected = true; 
-		console.log("노선을 변경했습니다.");
-	}
-	function join02() {
-		
-		// 비밀번호 확인
-		let pw = document.getElementById("pw");
-		let pw2 = document.getElementById("pw2");
-		if (pw.value != pw2.value) {
-			alert("비밀번호가 일치하지 않습니다.");
-			pw.value="";
-			pw2.value="";
-			pw.focus();
-			return false;
+		function selRoad() {
+			let place = document.getElementById("place");
+			place.options[0].selected = true;
+			console.log("노선을 변경했습니다.");
 		}
 		
-		// 노선선택
-		let road = document.getElementById("road");
-		if (road.selectedIndex == 0) {
-			alert("노선을 선택하세요.");
-			road.focus();
-			return false;
-		}
-		
-		// 탑승장소
-		let place = document.getElementById("place");
-		if (place.value == "") {
-			alert("탑승장소를 선택하세요.");
-			place.focus();
-			return false;
-		}
-		
-		// console.log(road.options[road.selectedIndex].innerHTML);
-		console.log(road.selectedIndex);
-		console.log(road.value);
-		
-		console.log("가입하기 버튼이 활성화 눌렸습니다.");
-		return true;
-			
-	}
-	
-	function pwChk(t) {
-		if (t.value.length >= 8 && t.value.length <=12) {
-			let regE = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
-			if( !regE.test(t.value) ) {
-			    alert("비밀번호는 영문자, 숫자, 특수문자를 포함해야 합니다.");
-			    return false;
+		function join02() {
+			// 비밀번호 확인
+			let pw = document.getElementById("pw");
+			let pw2 = document.getElementById("pw2");
+			if (pw.value != pw2.value) {
+				alert("비밀번호가 일치하지 않습니다.");
+				pw.value = "";
+				pw2.value = "";
+				//pw.focus();
+				return false;
 			}
-		} else {
-			alert("비밀번호는 8자 이상 12자 이하로 입력하셔야 합니다.");
+
+			// 노선선택
+			let road = document.getElementById("road");
+			if (road.selectedIndex == 0) {
+				alert("노선을 선택하세요.");
+				road.focus();
+				return false;
+			}
+
+			// 탑승장소
+			let place = document.getElementById("place");
+			if (place.value == "") {
+				alert("탑승장소를 선택하세요.");
+				place.focus();
+				return false;
+			}
+
+			// console.log(road.options[road.selectedIndex].innerHTML);
+			console.log(road.selectedIndex);
+			console.log(road.value);
+
+			console.log("가입하기 버튼이 활성화 눌렸습니다.");
+			return true;
+
 		}
-		console.log("나랏말싸미" + t.value.length);
-	}
+
+		function pwChk(t) {
+			if (t.value.length >= 8 && t.value.length <= 12) {
+				let regE = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+				if (!regE.test(t.value)) {
+					alert("비밀번호는 영문자, 숫자, 특수문자를 포함해야 합니다.");
+					return false;
+				}
+			} else {
+				alert("비밀번호는 8자 이상 12자 이하로 입력하셔야 합니다.");
+			}
+			//console.log("나랏말싸미" + t.value.length);
+		}
+		function pwshow(t) {
+			//let pw2 = document.getElementById("pw2");
+			if(t.checked) {
+				pw.type="text";
+				pw2.type = "text";	
+			} else {
+				pw.type = "password";
+				pw2.type = "password";
+			}
+		}
+		
+		
 	</script>
 </body>
 </html>

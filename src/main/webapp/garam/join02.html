@@ -50,7 +50,7 @@
 					<span>(※최대 12자리)</span>
 				</div>
 				<input type="password"  name="" id="pw" value="" maxlength='12' required="required"
-					placeholder="문자,숫자,특수문자를 하나 이상 사용하세요.(최대 12자)">
+					onfocusout = "pwChk(this)" placeholder="문자,숫자,특수문자를 하나 이상 사용하세요.(최대 12자)">
 			</div>
 
 			<div>
@@ -133,8 +133,20 @@
 		
 		console.log("가입하기 버튼이 활성화 눌렸습니다.");
 		return true;
-		
-		
+			
+	}
+	
+	function pwChk(t) {
+		if (t.value.length >= 8 && t.value.length <=12) {
+			let regE = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+			if( !regE.test(t.value) ) {
+			    alert("비밀번호는 영문자, 숫자, 특수문자를 포함해야 합니다.");
+			    return false;
+			}
+		} else {
+			alert("비밀번호는 8자 이상 12자 이하로 입력하셔야 합니다.");
+		}
+		console.log("나랏말싸미" + t.value.length);
 	}
 	</script>
 </body>

@@ -1,0 +1,95 @@
+<!-- 가람관광 로그인 화면 만들어보기 -->
+<!-- div는 악이다. -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 뷰포트 삽입 -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>회원가입sub</title>
+<link rel="stylesheet" href="css/style2.css">
+</head>
+<body class="page07">
+	<!--<div class="">: 전체를 묶어주지 않으니까 의미없는 alert()가 실행됨. -->
+	<div class="">
+		<div class="jointit w100 tC">
+			<b>회원가입</b>
+		</div>
+		<!-- container -->
+		<!-- 정보를 남에게 보이면 안 돼 + 전송할 정보가 많네? = post -->
+		<!-- 정보 보여도 되고 전송할 정보가 적네? = get -->
+		<form method="post" action="join03.html" >
+			<div class="pd16">
+
+				<div>
+					<h4>이름</h4>
+					<input type="text">
+				</div>
+
+				<div>
+					<h4>학교</h4>
+					<input type="text">
+				</div>
+
+				<div>
+					<h4>학년/반</h4>
+					<input type="text">
+				</div>
+
+				<div class="pnum">
+					<div>
+						<h4 class="inline">
+							휴대폰번호<span>(※휴대폰 번호가 ID로 설정됩니다.)</span>
+						</h4>
+					</div>
+					<input type="text">
+				</div>
+
+
+				<div>
+					<div>
+						<h4 class="inline">비밀번호</h4>
+						<span>(※최대 12자리)</span>
+					</div>
+					<input type="password">
+				</div>
+
+				<div>
+					<h4>비밀번호 확인</h4>
+					<input type="password">
+				</div>
+
+				<div>
+					<h4>노선</h4>
+					<div class="sltbox">
+						<select name="">
+							<option value="">노선선택</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select>
+					</div>
+				</div>
+
+				<div>
+					<h4 class="inline">탑승장소</h4>
+					<span>(※ 노선을 먼저 선택해주세요)</span>
+					<div class="sltbox">
+						<select name="">
+							<option value="">장소선택</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="jw100 tC">
+					<button>가입하기</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

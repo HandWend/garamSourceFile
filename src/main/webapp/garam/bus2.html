@@ -11,6 +11,7 @@
 </head>
 
 <body class="page03">
+	
 	<div class="c01 pd16">
 		<div class="tC title">
 			<h2>버스탑승</h2>
@@ -20,8 +21,8 @@
 			<li id="offschool">하교</li>
 		</ul>
 	</div>
-
-	<div id="goschool" class="pd16 pdb">
+	
+	<div id="goschool" class="pd16 pdb" >
 		<div class="mb16 select">
 			<img src="./img/img04.png">출발지
 			<div class="fR">
@@ -32,7 +33,7 @@
 				</select> <img src="./img/ico05.png">
 			</div>
 		</div>
-
+	
 		<div class=" select">
 			<img src="./img/img04.png">도착지 <span class="fR">포항고등학교</span>
 			<!--등교 도착지는 학교로 고정-->
@@ -41,12 +42,12 @@
 	</div>
 
 	<div id="gohome" class="pd16 pdb">
+		<div class=" select">
+			<img src="./img/img04.png">출발지 <span class="fR">포항고등학교</span>
+			<!--등교 도착지는 학교로 고정-->
+		</div>
 		<div class="mb16 select">
-			<img src="./img/img04.png">출발지
-			<div  class=" select">
-				<img src="./img/img04.png">출발지 <span class="fR">포항고등학교</span>
-				<!--등교 도착지는 학교로 고정-->
-			</div>
+			<img src="./img/img04.png">도착지
 			<div class="fR">
 				<select name="start">
 					<option value="">우방비치타운</option>
@@ -55,23 +56,21 @@
 				</select> <img src="./img/ico05.png">
 			</div>
 		</div>
-
-
-		<button class="mX mt40" onclick="location.href='qrcode.html'">QR
-			Code 실행</button>
 	</div>
 
-
+	<button class="mX mt40" onclick="location.href='qrcode.html'">QR
+		Code 실행</button>
+	
 
 	<div class="FAB">
 		<ul class="ulFl">
 			<li><a href="mypage.html"><img src="./img/ico01.png">
-				<p>내정보</p></a></li>
+					<p>내정보</p></a></li>
 			<li class="on"><a href="bus.html"><img
 					src="./img/ico02_on.png">
-				<p>버스탑승</p></a></li>
+					<p>버스탑승</p></a></li>
 			<li><a href="list.html"><img src="./img/ico03.png">
-				<p>이용내역</p></a></li>
+					<p>이용내역</p></a></li>
 		</ul>
 	</div>
 	<script type="text/javascript">
@@ -97,6 +96,5 @@
 
 		});
 	</script>
-	
 </body>
 </html>

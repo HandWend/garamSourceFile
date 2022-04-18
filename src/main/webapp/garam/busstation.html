@@ -1,0 +1,63 @@
+<!-- 가람관광 로그인 화면 만들어보기 -->
+<!-- div는 악이다. -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 뷰포트 삽입 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>버스탑승sub</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="page03">
+<!-- 버스탑승 및 등,하교 -->
+<div class="c01 pd16">
+	<!-- 첫 번째 div -->
+	<div class= "tC title">
+		<h2>버스탑승</h2>
+		<ul class="ulFl school">
+			<li class="on">등교</li>
+			<li>하교</li>
+		</ul>
+	</div>
+</div>
+
+<!-- 출발지와 도착지 div -->
+<div class="pd16 pdb">
+	<!-- 출발지 -->
+	<div class="mb16 select">
+		<img src="img04.png">출발지
+		<div class="fR">
+			<select name="start">
+				<option values="#">낙천대</option>
+				<option values="#">두산위브</option>
+				<option values="#">대림골든빌</option>
+			</select>
+		</div>
+	</div>
+	<!-- 도착지 -->
+	<div class="select">
+		<img src="img04.png">도착지
+		<span class="fR">포항장성고등학교</span>
+	</div>
+	<button class="mX mt40" onclick="location.href='qrcode.html'" >QR Code 실행</button>
+</div>
+
+	
+<!-- QR Code 실행 -->
+<div class="FAB">
+	<ul class="ulFl">
+		<li><a href="mypage.html"><img src="ico01.png"><p>내 정보</p></a></li>
+		<li class="on"><a href="bus.html"><img src="ico02_on.png"><p>버스탑승</p></a></li>
+		<li><a href="list.html"><img src="ico03.png"><p>이용내역</p></a></li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	
+});
+</script>
+</body>
+</html>
